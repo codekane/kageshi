@@ -8,3 +8,16 @@ Are you looking for a better way?
 It's here. The new Kageshit Browser Extension.
 
 [Version 0.1](https://fried-possum-peckers.github.io/kageshit/release/kageshit-0.1.xpi) -- Firefox Only
+
+
+## Instructions
+Automagically will fix imgUR links being broken. It's the single most important
+thing.  
+
+Also includes a fancy SoundCloud Player.  
+!sc_add <Soundcloud URL>  
+!sc_remove <Soundcloud URL>  
+
+The player will work for anyone with the extension installed.  
+
+Nifty, right?
