@@ -7,4 +7,4 @@ Are you looking for a better way?
 
 It's here. The new Kageshit Browser Extension.
 
-[Version 0.1](https://fried-possum-peckers.github.io/kageshit/releases/kageshit-0.1.xpi)
+[Version 0.1](https://fried-possum-peckers.github.io/kageshit/release/kageshit-0.1.xpi)
