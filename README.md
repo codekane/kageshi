@@ -19,3 +19,8 @@ Clone repository.
 In Firefox go to about:debugging and then This Firefox.
 Load Temporary Add-On, then point at any file in the folder.
 Shazam. It works.
+
+
+## TODO
+
+Documentation!
