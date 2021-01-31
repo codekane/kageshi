@@ -1,0 +1,13 @@
+{
+  "addons": {
+    "kageshit": {
+      "updates": [
+        {
+          "version": "0.1",
+          "update_link": "https://fried-possum-peckers.github.io/kageshit/release/kageshit-0.1.xpi"
+        }
+      ]
+    }
+
+  }
+}

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Kageshit",
-  "version": "1",
+  "name": "kageshit",
+  "version": "0.1",
 
   "description": "Autoloads a shim on ezcapechat.com to provide additional functionality, and fix stupid bugs.",
 
@@ -19,6 +19,12 @@
       "matches": ["*://www.ezcapechat.com/rooms/*"],
       "js": ["kageshit.js"]
     }
-  ]
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "update_url": "https://fried-possum-peckers.github.io/kageshit/manifest_version/updates.json"
+    }
+  }
 
 }
