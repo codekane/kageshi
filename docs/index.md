@@ -15,8 +15,8 @@ Automagically will fix imgUR links being broken. It's the single most important
 thing.  
 
 Also includes a fancy SoundCloud Player.  
-!sc_add <Soundcloud URL>  
-!sc_remove <Soundcloud URL>  
+>> !sc_add  URL  
+>> !sc_remove URL  
 
 The player will work for anyone with the extension installed.  
 
