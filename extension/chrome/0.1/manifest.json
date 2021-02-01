@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "kageshit",
+  "version": "0.1",
+
+  "description": "Autoloads a shim on ezcapechat.com to provide additional functionality, and fix stupid bugs.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "permissions": [
+    "*://*.ezcapechat.com/rooms/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.ezcapechat.com/rooms/*"],
+      "js": ["kageshit.js"]
+    }
+  ]
+}
