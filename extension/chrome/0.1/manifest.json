@@ -10,12 +10,13 @@
   },
 
   "permissions": [
-    "*://*.ezcapechat.com/rooms/*"
+    "*://*.ezcapechat.com/rooms/*",
+    "activeTab"
   ],
 
   "content_scripts": [
     {
-      "matches": ["*://www.ezcapechat.com/rooms/*"],
+      "matches": ["*://*.ezcapechat.com/rooms/*"],
       "js": ["kageshit.js"]
     }
   ]
