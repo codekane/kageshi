@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "kageshit",
+  "version": "0.2",
+
+  "description": "Autoloads a shim on ezcapechat.com to provide additional functionality, and fix stupid bugs.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "permissions": [
+    "*://www.ezcapechat.com/rooms/*",
+    "activeTab",
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.ezcapechat.com/rooms/*"],
+      "js": ["kageshit.js"]
+    }
+  ],
+
+  "options_ui": {
+    "page": "options.html"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "update_url": "https://fried-possum-peckers.github.io/kageshit/manifest_version/updates.json",
+      "id": "kageshit@ezcapechat.com"
+    }
+  }
+
+}
