@@ -29,7 +29,3 @@ fc_chatbox.prototype.addnormal = function (t, e, n, s, i, o, c, r){
         console.log('fc_chatbox.prototype.addnormal exception: ' + t)
     }
 }
-
-// Fixes the message being there on page load
-
-document.querySelector("input.fs_1").value = "";
