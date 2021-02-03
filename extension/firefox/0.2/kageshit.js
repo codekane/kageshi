@@ -42,8 +42,7 @@ function load_lib_scriptz() {
 function bootstrap_fixes() {
     fix_scriptz = [
         // fix imgUr links
-        'https://codekane.github.io/kageshit/shim/ghetto_link_fix_2021.js',
-        'https://codekane.github.io/kageshit/shim/dongs_message_fix.js'
+        'https://codekane.github.io/kageshit/shim/ghetto_link_fix_2021.js
     ];
     scriptz_idx = 0;
 
