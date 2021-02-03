@@ -3,7 +3,7 @@
   "name": "kageshit",
   "version": "0.2",
 
-  "description": "Autoloads a shim on ezcapechat.com to provide additional functionality, and fix stupid bugs.",
+  "description": "The wondrous Kageshit shim. Team effort of the Dankhouse Developers, making your life better.",
 
   "icons": {
     "48": "icons/border-48.png"

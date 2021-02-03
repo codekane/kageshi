@@ -4,7 +4,11 @@
       "updates": [
         {
           "version": "0.1",
-          "update_link": "https://fried-possum-peckers.github.io/kageshit/release/kageshit-0.1.xpi"
+          "update_link": "https://codekane.github.io/kageshit/release/kageshit-0.1.xpi"
+        },
+        {
+          "version": "0.2",
+          "update_link": "https://codekane.github.io/kageshit/release/kageshit-0.2.xpi"
         }
       ]
     }
