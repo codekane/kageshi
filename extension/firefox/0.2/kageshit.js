@@ -22,8 +22,7 @@ function sleep(ms) {
 }
 
 lib_scriptz = [
-    'https://codekane.github.io/kageshit/shim/jquery-3.5.1.min.js',
-    'https://codekane.github.io/kageshit/shim/scp.js'
+    'https://codekane.github.io/kageshit/shim/jquery-3.5.1.min.js'
 ]
 scriptz_idx = 0;
 
@@ -40,6 +39,29 @@ function load_lib_scriptz() {
 }
 
 
+function bootstrap_fixes() {
+    fix_scriptz = [
+        // fix imgUr links
+        'https://codekane.github.io/kageshit/shim/ghetto_link_fix_2021.js'
+    ];
+    scriptz_idx = 0;
+
+    Promise.all(fix_scriptz.map(script => {
+        include(script)
+    })).then(() => {
+        console.log('bootstrapped fixes')
+    })
+
+}
+
+load_lib_scriptz().then(async function () {
+    while (typeof (jQuery) !== "function") {
+        await sleep(500);
+    }
+    jQuery.noConflict();
+}).then(() => {
+    bootstrap_fixes()
+});
 
 `
 //
