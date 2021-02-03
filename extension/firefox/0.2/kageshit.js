@@ -1,20 +1,62 @@
-var test = `console.log('testing!')
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "https://gist.githubusercontent.com/smokeyhere/a38a9b01fe4d98ec2097dad70355f545/raw/8a691cccf1fd4dc52122c0aa9e50702dacdd5cef/kageshit_shim.js");
-xmlhttp.onreadystatechange = function () {
-    if ((xmlhttp.status < 400) && (xmlhttp.readyState === 4)) {
-        eval(xmlhttp.responseText);
-    }
-};
-xmlhttp.send();
+var shim = `
+function include(scriptUrl) {
+    return new Promise((resolve, reject) => {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", scriptUrl);
+        xmlhttp.onreadystatechange = function () {
+            if ((xmlhttp.status < 400) && (xmlhttp.readyState === 4)) {
+                eval(xmlhttp.responseText);
+                new Promise(async function (r2) {
+                    await sleep(500);
+                    r2(true);
+                }).then(resolve(true));
+            }
+        };
+        xmlhttp.send();
+    });
 
-`;
+}
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+lib_scriptz = [
+    'https://codekane.github.io/kageshit/shim/jquery-3.5.1.min.js',
+    'https://codekane.github.io/kageshit/shim/scp.js'
+]
+scriptz_idx = 0;
+
+//setup a function that loads a single script
+function load_lib_scriptz() {
+    return new Promise(resolve => {
+        Promise.all(lib_scriptz.map(script => {
+            include(script)
+        })).then(() => {
+            console.log('bootstrapped jq/sc')
+            resolve(true)
+        })
+    })
+}
+
+
+
+`
+//
+//  var shim = `var xmlhttp = new XMLHttpRequest();
+//  xmlhttp.open("GET", "https://gist.githubusercontent.com/smokeyhere/a38a9b01fe4d98ec2097dad70355f545/raw/8a691cccf1fd4dc52122c0aa9e50702dacdd5cef/kageshit_shim.js");
+//  xmlhttp.onreadystatechange = function () {
+//      if ((xmlhttp.status < 400) && (xmlhttp.readyState === 4)) {
+//          eval(xmlhttp.responseText);
+//      }
+//  };
+//  xmlhttp.send();
+//  `;
+//  
 
 var kageshit = document.createElement('script');
 kageshit.type = 'text/javascript';
 kageshit.async = true;
-// kageshit.src = "https://gist.github.com/smokeyhere/904d94f0757774fc2255f038e97fa707.js";
-kageshit.innerHTML = test;
+kageshit.innerHTML = shim;
 
 document.head.appendChild(kageshit);
