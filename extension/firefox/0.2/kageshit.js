@@ -42,7 +42,8 @@ function load_lib_scriptz() {
 function bootstrap_fixes() {
     fix_scriptz = [
         // fix imgUr links
-        'https://codekane.github.io/kageshit/shim/ghetto_link_fix_2021.js'
+        'https://codekane.github.io/kageshit/shim/ghetto_link_fix_2021.js',
+        'https://codekane.github.io/kageshit/shim/dongs_message_fix.js'
     ];
     scriptz_idx = 0;
 
@@ -64,17 +65,6 @@ load_lib_scriptz().then(async function () {
 });
 
 `
-//
-//  var shim = `var xmlhttp = new XMLHttpRequest();
-//  xmlhttp.open("GET", "https://gist.githubusercontent.com/smokeyhere/a38a9b01fe4d98ec2097dad70355f545/raw/8a691cccf1fd4dc52122c0aa9e50702dacdd5cef/kageshit_shim.js");
-//  xmlhttp.onreadystatechange = function () {
-//      if ((xmlhttp.status < 400) && (xmlhttp.readyState === 4)) {
-//          eval(xmlhttp.responseText);
-//      }
-//  };
-//  xmlhttp.send();
-//  `;
-//  
 
 var kageshit = document.createElement('script');
 kageshit.type = 'text/javascript';
