@@ -60,7 +60,14 @@ function bootstrap_tools() {
   tool_scriptz = [
     // Soundcloud Player Intestines
     'https://codekane.github.io/kageshit/shim/scp.js'
-  ]
+  ];
+  script_idx = 0;
+
+  Promise.all(tool_scriptz.map(script => {
+    include(script)
+  })).then(() => {
+    console.log('bootstrapped tools')
+    })
 }
 
 load_lib_scriptz().then(async function () {
@@ -95,7 +102,6 @@ function dongGot(item) {
     css.setAttribute("type", "text/css");
     css.setAttribute("rel", "stylesheet");
     css.innerHTML = dongStyle;
-    //css.setAttribute("href", "https://misconfigured.link/kageshit-personal.css?" + rand);
     document.head.appendChild(css);
   }
 }
@@ -105,6 +111,3 @@ function dongGone(error) {
 let dongCheck = browser.storage.local.get('dongStyle');
 dongCheck.then(dongGot, dongGone);
 
-console.log(dongChecked);
-if (dongChecked == "true") {
-  }
