@@ -22,7 +22,8 @@ function sleep(ms) {
 }
 
 lib_scriptz = [
-    'https://codekane.github.io/kageshit/shim/jquery-3.5.1.min.js'
+    'https://codekane.github.io/kageshit/shim/jquery-3.5.1.min.js',
+    'https://codekane.github.io/kageshit/shim/sc_api.js'
 ]
 scriptz_idx = 0;
 
@@ -55,6 +56,13 @@ function bootstrap_fixes() {
 
 }
 
+function bootstrap_tools() {
+  tool_scriptz = [
+    // Soundcloud Player Intestines
+    'https://codekane.github.io/kageshit/shim/scp.js'
+  ]
+}
+
 load_lib_scriptz().then(async function () {
     while (typeof (jQuery) !== "function") {
         await sleep(500);
@@ -62,6 +70,8 @@ load_lib_scriptz().then(async function () {
     jQuery.noConflict();
 }).then(() => {
     bootstrap_fixes()
+}).then(() => {
+    bootstrap_tools()
 });
 
 
