@@ -1,13 +1,26 @@
 # Kageshit Browser Extension
+It's here. The Kageshit Firefox Extension.
 
-It's here. The new Kageshit Firefox Extension.
+[Version 0.21 Firefox](https://codekane.github.io/kageshit/release/kageshit-0.21.xpi)  
 
-[Version 0.2 Firefox](https://codekane.github.io/kageshit/release/kageshit-0.2.xpi)  
+## What is this?
+This is a browser extension for adding features, and fixing bugs on
+[ezcapechat.com](https://www.ezcapechat.com). If you're unfamiliar, it's a site
+for video-chatting with your friends, and for making new ones.
 
-## Installation Instructions
->> Install the .xpi file
+## Why are you doing this?
+Because by working on this project, I am provided with the opportunity to
+directly improve the quality of life for people I care about. That matters to
+me.
 
-## Release Notes
+
+## V0.21 Release Notes
+- Add support for Dongfix's fancy stylings.
+- Add toggle to enable/disable aforementioned stylings in the add-on preference
+    page
+
+
+## V0.2 Release Notes
 - SoundCloud is temporarily disabled, while I work out the kinks, and
     reverse-engineer the code. It'll be back.
 - Tab completion is now working wonderfully, thanks to dongfix.
@@ -16,19 +29,6 @@ It's here. The new Kageshit Firefox Extension.
     anything yet, or you try to PM someone.
 
 
-Development is by no means concluded. The feature list her is decidedly
-incomplete. For once in our history, we're pulling together all of our work, to
-share with you all, our friends.
-
-This is Version 0.2 for Firefox. Version 0.1 broke when Github stopped serving
-our Gists.
 
 [Dongfix's Chrome Extension](https://misconfigured.link/extension.html)
 
-Work is ongoing on all ends to port over all features from all versions to all
-browsers. Please be patient.
-
-I love you all.
-
-Sincerely,  
-Scald

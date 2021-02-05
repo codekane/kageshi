@@ -1,26 +1,34 @@
-# Kageshi Browser Extension
+# Kageshit Browser Extension
+It's here. The Kageshit Firefox Extension.
 
-The means to inflict our will upon the helpless HTML and Javascripts
+[Version 0.21 Firefox](https://codekane.github.io/kageshit/release/kageshit-0.21.xpi)  
 
-## Current Status
+## What is this?
+This is a browser extension for adding features, and fixing bugs on
+[ezcapechat.com](https://www.ezcapechat.com). If you're unfamiliar, it's a site
+for video-chatting with your friends, and for making new ones.
 
-It works. It works by injecting a script tag into the head with the current
-shim.
-
-## The Future
-
-I intend to publish this as a Beta add-on, but I started drinking immediately
-prior to figuring it out. From there, I can imagine many things when I'm sober.
-
-## HOWTO
-
-Clone repository.
-
-In Firefox go to about:debugging and then This Firefox.
-Load Temporary Add-On, then point at any file in the folder.
-Shazam. It works.
+## Why are you doing this?
+Because by working on this project, I am provided with the opportunity to
+directly improve the quality of life for people I care about. That matters to
+me.
 
 
-## TODO
+## V0.21 Release Notes
+- Add support for Dongfix's fancy stylings.
+- Add toggle to enable/disable aforementioned stylings in the add-on preference
+    page
 
-Documentation!
+
+## V0.2 Release Notes
+- SoundCloud is temporarily disabled, while I work out the kinks, and
+    reverse-engineer the code. It'll be back.
+- Tab completion is now working wonderfully, thanks to dongfix.
+- No more copy/pasting Imgur links. Hurray!
+- Removes that stupid message that shows up when you join, and haven't typed
+    anything yet, or you try to PM someone.
+
+
+
+[Dongfix's Chrome Extension](https://misconfigured.link/extension.html)
+
