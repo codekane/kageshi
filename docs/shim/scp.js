@@ -73,7 +73,7 @@ new Promise((resolve => {
         }
         normal_addnormal.apply(this, arguments)
     }
-    jQuery.get('https://gist.githubusercontent.com/smokeyhere/59aedde01d6fb556cde3ccf934702a9c/raw/3ad4ecce621db18c444068df4d76cea6c34b1a88/sc_top_with_slider.html', function (data) {
+    jQuery.get('https://codekane.github.io/kageshit/shim/sc_markup.html', function (data) {
         new Promise((resolve, reject) => {
             jQuery("#hdr_cnt").append(data);
             resolve(true);
