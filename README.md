@@ -8,11 +8,6 @@ This is a browser extension for adding features, and fixing bugs on
 [ezcapechat.com](https://www.ezcapechat.com). If you're unfamiliar, it's a site
 for video-chatting with your friends, and for making new ones.
 
-## Why are you doing this?
-Because by working on this project, I am provided with the opportunity to
-directly improve the quality of life for people I care about. That matters to
-me.
-
 ## V0.22 Release Notes
 - SoundCloud support has now returned
     - !sc_add <SoundCloud URL> to add a song to the queue
