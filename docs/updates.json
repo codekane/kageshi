@@ -29,6 +29,10 @@
         {
           "version": "0.25",
           "update_link": "https://codekane.github.io/kageshit/release/kageshit-0.25.xpi"
+        },
+        {
+          "version": "0.25.1",
+          "update_link": "https://codekane.github.io/kageshit/release/kageshit-0.25.1.xpi"
         }
       ]
     }
