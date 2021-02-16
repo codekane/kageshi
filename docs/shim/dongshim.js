@@ -25,18 +25,8 @@ const kagShim = {
       });
 
 
-        //$("button[data-btntype=\"pm\"]").on("click", () => {
-        //  let textAreas = $("textarea.fs_1:not(.parsed)");
-        //  for(let i = 0; i < textAreas.length; i++ ) {
-        //    textArea = textAreas[i];
-        //    textArea.value = "";
-        //    textArea.setAttribute("class", "fs_1 parsed");
-        //    textArea.focus();
-        //  }
-        //});
-
         document.getElementById("chatbox").onkeydown = (event) => {
-            $("#chatbox").tabComplete({
+            jQuery("#chatbox").tabComplete({
                 tabbingChar: "@",
                 values: kagShim.userNames.sort()
             });
