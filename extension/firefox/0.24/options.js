@@ -5,12 +5,6 @@ function styleCheck(event) {
   });
 }
 
-function fontCheck(event) {
-  let toggle = event.target.checked === true;
-  browser.storage.local.set({
-    normFonts: toggle
-  });
-
 function sizeCheck(event) {
   let toggle = event.target.checked === true;
   browser.storage.local.set({
@@ -36,4 +30,4 @@ function restoreOptions() {
 
 document.addEventListener("DOMContentLoaded", restoreOptions);
 document.querySelector("#dongStyle").addEventListener("change", styleCheck);
-document.querySelector('#normFonts').addEventListener('change', fontCheck);
+document.querySelector('#normFonts').addEventListener('change', sizeCheck);

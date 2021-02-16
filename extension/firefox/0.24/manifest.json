@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "kageshit",
-  "version": "0.23",
-  "description": "The wondrous Kageshit shim. Team effort of the Dankhouse Developers, making your life better.",
+  "version": "0.24",
+  "description": "The wondrous Kageshit shim.",
   "icons": {
     "48": "icons/klogo@48px.png",
     "96": "icons/klogo@96px.png"

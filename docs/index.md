@@ -8,6 +8,10 @@ This is a browser extension for adding features, and fixing bugs on
 [ezcapechat.com](https://www.ezcapechat.com). If you're unfamiliar, it's a site
 for video-chatting with your friends, and for making new ones.
 
+## V0.24 Release Notes
+- New Feature: Text-size normalization.
+    - enable in Preference pane to force everyones font size to 1em
+
 ## V0.23 Release Notes
 - New Logo!
 ## V0.22 Release Notes

@@ -1,13 +1,19 @@
 # Kageshit Browser Extension
 It's here. The Kageshit Firefox Extension.
 
-[Version 0.22 Firefox](https://codekane.github.io/kageshit/release/kageshit-0.22.xpi)  
+[Version 0.23 Firefox](https://codekane.github.io/kageshit/release/kageshit-0.23.xpi)  
 
 ## What is this?
 This is a browser extension for adding features, and fixing bugs on
 [ezcapechat.com](https://www.ezcapechat.com). If you're unfamiliar, it's a site
 for video-chatting with your friends, and for making new ones.
 
+## V0.24 Release Notes
+- New Feature: Text-size normalization.
+    - enable in Preference pane to force everyones font size to 1em
+
+## V0.23 Release Notes
+- New Logo!
 ## V0.22 Release Notes
 - SoundCloud support has now returned
     - !sc_add <SoundCloud URL> to add a song to the queue
