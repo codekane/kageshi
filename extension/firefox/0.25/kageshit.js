@@ -1,10 +1,27 @@
 // Script Injection
 var shim = `function include(scriptUrl){return new Promise((resolve,reject)=>{var xmlhttp=new XMLHttpRequest;xmlhttp.open("GET",scriptUrl),xmlhttp.onreadystatechange=function(){xmlhttp.status<400&&4===xmlhttp.readyState&&(eval(xmlhttp.responseText),new Promise(async function(t){await sleep(500),t(!0)}).then(resolve(!0)))},xmlhttp.send()})}function sleep(t){return new Promise(e=>setTimeout(e,t))}function load_lib_scriptz(){return new Promise(t=>{Promise.all(lib_scriptz.map(t=>{include(t)})).then(()=>{console.log("bootstrapped jq/sc"),t(!0)})})}function bootstrap_fixes(){fix_scriptz=["https://codekane.github.io/kageshit/shim/ghetto_link_fix_2021.js","https://codekane.github.io/kageshit/shim/dongshim.js"],scriptz_idx=0,Promise.all(fix_scriptz.map(t=>{include(t)})).then(()=>{console.log("bootstrapped fixes")})}function bootstrap_tools(){tool_scriptz=["https://codekane.github.io/kageshit/shim/scp.js"],script_idx=0,Promise.all(tool_scriptz.map(t=>{include(t)})).then(()=>{console.log("bootstrapped tools")})}lib_scriptz=["https://codekane.github.io/kageshit/shim/jquery-3.5.1.min.js","https://codekane.github.io/kageshit/shim/sc_api.js"],scriptz_idx=0,load_lib_scriptz().then(async function(){for(;"function"!=typeof jQuery;)await sleep(500);jQuery.noConflict()}).then(()=>{bootstrap_fixes()}).then(()=>{bootstrap_tools()});`
+
 var messageFix = `
+  // Fix the main chat window displaying 'message' on first load
   document.querySelector("input.chatmsg").id = "chatbox";
   document.getElementById("chatbox").value = "";
   document.getElementById("chatbox").focus();
+
+  // Fix the PM windows displaying 'message'
+  document.querySelector("button[data-btntype=\"pm\"]").addEventListener("click", () => {
+    let textAreas = document.querySelectorAll("textarea:not(.parsed)");
+
+    for(let i = 0; i < textAreas.length; i++) {
+      textArea = textAreas[i];
+      textArea.value = "";
+      textArea.classList.add("parsed");
+      textArea.focus();
+    }
+  });
 `
+
+
+
 
 var scripts = [shim, messageFix];
 
@@ -12,7 +29,7 @@ var scripts = [shim, messageFix];
 function addScript(script) {
   var element = document.createElement('script');
   element.type = 'text/javascript';
-  element.async = true;
+  element.async = 'true';
   element.innerHTML = script;
   document.head.appendChild(element);
 }
