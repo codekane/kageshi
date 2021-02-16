@@ -7,7 +7,23 @@ const kagShim = {
     userNames: [],
     load: () => {
 
-        let info = fcr._fc;
+      let info = fcr._fc;
+      // Fix main chat displaying message
+      document.querySelector("input.chatmsg").id = "chatbox";
+      document.getElementById("chatbox").value = "";
+      document.getElementById("chatbox").focus();
+      // Fix PM windows displaying message
+      document.querySelector("button[data-btntype=\"pm\"]").addEventListener("click", () => {
+        let textAreas = document.querySelectorAll("textarea:not(.parsed)");
+
+        for(let i = 0; i < textAreas.length; i++) {
+          textArea = textAreas[i];
+          textArea.value = "";
+          textArea.classList.add("parsed");
+          textArea.focus();
+        }
+      });
+
 
         //$("button[data-btntype=\"pm\"]").on("click", () => {
         //  let textAreas = $("textarea.fs_1:not(.parsed)");
