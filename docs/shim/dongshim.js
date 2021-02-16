@@ -18,7 +18,7 @@ const kagShim = {
 
         let info = fcr._fc;
         // Fix the message bit
-        document.querySelector("input.chatmsg"]").id = "chatbox";
+        document.querySelector("input.chatmsg").id = "chatbox";
         document.getElementById("chatbox").value = "";
         document.getElementById("chatbox").focus();
 
