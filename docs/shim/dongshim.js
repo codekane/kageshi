@@ -6,22 +6,8 @@ const kagShim = {
     userInterval: null,
     userNames: [],
     load: () => {
-        //let tweak = getLocalStorage("cssTweaks");
-        //console.log("Tweak is ", tweak);
-        //if( getLocalStorage("cssTweaks") == "true" ) {
-        //    let css = document.createElement("style");
-        //    css.setAttribute("type", "text/css");
-        //    css.setAttribute("rel", "stylesheet");
-        //    css.setAttribute("href", "https://misconfigured.link/kageshit-personal.css?" + rand);
-        //    document.getElementById("ftr").appendChild(css);
-        //}
 
         let info = fcr._fc;
-        // Fix the message bit
-        document.querySelector("input.chatmsg").id = "chatbox";
-        document.getElementById("chatbox").value = "";
-        document.getElementById("chatbox").focus();
-
 
         $("button[data-btntype=\"pm\"]").on("click", () => {
             let textAreas = $("textarea.fs_1:not(.parsed)");
