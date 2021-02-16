@@ -1,7 +1,7 @@
 # Kageshit Browser Extension
 It's here. The Kageshit Firefox Extension.
 
-[Version 0.24 Firefox](https://codekane.github.io/kageshit/release/kageshit-0.24.xpi)  
+[Version 0.25 Firefox](https://codekane.github.io/kageshit/release/kageshit-0.25.xpi)  
 
 ## What is this?
 This is a browser extension for adding features, and fixing bugs on
