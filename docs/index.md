@@ -8,8 +8,13 @@ This is a browser extension for adding features, and fixing bugs on
 [ezcapechat.com](https://www.ezcapechat.com). If you're unfamiliar, it's a site
 for video-chatting with your friends, and for making new ones.
 
+## V0.3 Release Notes
+- Make everything place nice together
+- No more '$ is not a function' errors
+- Fix tab-completion
+
 ## V0.25 Release Notes
-  - Update the message fix so that it properly works in PM windows
+- Update the message fix so that it properly works in PM windows
 
 ## V0.24 Release Notes
 - New Feature: Text-size normalization.

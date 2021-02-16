@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Kageshit",
+  "version": "0.3",
+  "description": "The wondrous Kageshit shim.",
+  "icons": {
+    "48": "icons/klogo@48px.png",
+    "96": "icons/klogo@96px.png"
+  },
+  "permissions": ["*://www.ezcapechat.com/rooms/*",
+                  "activeTab",
+                  "storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.ezcapechat.com/rooms/*"],
+      "js": ["kageshit.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "update_url": "https://fried-possum-peckers.github.io/kageshit/manifest_version/updates.json",
+      "id": "kageshit@ezcapechat.com"
+    }
+  }
+}
